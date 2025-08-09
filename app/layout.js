@@ -45,12 +45,30 @@ export default function RootLayout({ children }) {
 
             <div className="links-container">
               <div>
-                <h3>prOMills</h3>
-                <Link>GitHub</Link>
+                <h3>pr0Mills</h3>
+                <Link href={'./'}>GitHub</Link>
+              </div>
+              <div>
+                <h3>Store</h3>
+                <Link href={'./'}>Home</Link>
+                <Link href={'./cart'}>Cart</Link>
+              </div>
+              <div>
+                <h3>Support</h3>
+                <Link href={'./contact'}>Contact</Link>
+                <Link href={'./faq'}>FAQ</Link>
+                <Link href={'./chat'}>Chat</Link>
               </div>
             </div>
 
-            <div className="socials"></div>
+            <div className="socials">
+              <p>© <a href="https://www.promills.com" target="_blank">pr0Mills</a> 2025<br/>
+              Built with NextJS & <a href="https://www.fantacss.smoljames.com" target="_blank">
+              FantaCSS</a> 🔥</p>
+              <div className="socal-links">
+                <Link href={'https://github.com/pr0Mills'} target="_blank"><i className="fa-brands fa-github"></i></Link>
+              </div>
+            </div>
           </footer>
         </div>
       </body>
