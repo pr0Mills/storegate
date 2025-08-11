@@ -1,4 +1,5 @@
 import "./globals.css";
+//import "./futura.css"
 import "./fanta.css";
 import Head from "./head";
 import Link from "next/link";
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
                 <h1>StoreGate</h1>
               </Link>
               
-              <h5 className="mid-text">- Cool stuff for cool people!</h5>
+              <h5 className="mid-text">- Cool stuff for cool people -</h5>
               <Cart/>
             </div>
           </header>

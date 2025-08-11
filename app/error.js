@@ -12,7 +12,7 @@ export default function Error(props) {
     }, [error]) 
 
     return (
-        <div>
+        <div className="page-container">
             <h3>Something went wrong :(</h3>
             <div>
                 <button onClick={reset}>Reset</button>
