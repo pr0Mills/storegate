@@ -1,17 +1,20 @@
 import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
+import { fetchStripeProducts } from "@/lib/stripeProducts";
+
 
 
 export async function getProducts() {
   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
-  const response = await fetch('https://storegate.netlify.app' + '/api/products')
+  const response = await fetch(baseURL + '/api/products')
   const products = await response.json()
   return products
 }
 
 export default async function Home(props) {
 
-  const products = await getProducts()
+  const products = await fetchStripeProducts();
+
   
   let planner = null
   let stickers = []
