@@ -67,7 +67,7 @@ const CartDrawer = ({ isOpen, cart, total, onClose }) => {
                 }
             })
 
-            const response = await fetch(baseURL + '/api/checkout', {
+            const response = await fetch('https://storegate.netlify.app' + '/api/checkout', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
