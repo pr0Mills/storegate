@@ -20,17 +20,22 @@ export default function ImageBanner() {
             <img ref={imgRef} className="high-res-img" style={{ opacity: isLoaded ? 1 : 0 }} src="med_res/banner.png" alt="banner-high-res" onLoad={() => {
                 // when the high resolution image is completely loaded, this callback function will be executed and the intetion is to get is to takethis initially inbisible image, and now make it visible.
                 setIsLoaded(true)
-            }}/>
+            }} />
 
-            <div className="cta-btns-container"> 
+            <div className="cta-btns-container">
                 <div>
                     <div className="cta-btns-header">
                         <h3>Welcome to</h3>
                         <h1><strong>StoreGate</strong></h1>
                     </div>
                     <div>
-                        <button>Shop stickers</button>
-                        <button>Shop planner</button>
+
+                        <button onClick={() => document.getElementById('planner').scrollIntoView({ behavior: 'smooth' })}>
+                            Shop Planner
+                        </button>
+                        <button onClick={() => document.getElementById('stickers').scrollIntoView({ behavior: 'smooth' })}>
+                            Shop Stickers
+                        </button>
                     </div>
                 </div>
             </div>
